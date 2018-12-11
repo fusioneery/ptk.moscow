@@ -25,6 +25,9 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
+			
+*:focus 
+	outline: $accent auto 5px
 
 .img-responsive
 	display: block
@@ -47,19 +50,17 @@ ul
 a
 	color: black
 	text-decoration: none
+	transition: all .15s ease-in-out
 	&:hover
 		color: black
 		text-decoration: none
 
 *
 	font-variant-numeric: lining-nums
+	letter-spacing: 0.01em
 
 .header
-	height: 60px
-	// background-color: $lightgray
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-// .header__logo
-// 	height: 37px
 
 .nav__item
 	display: flex
@@ -72,10 +73,27 @@ a
 .nav__link
 	border-bottom: 3px solid $accent
 	line-height: 1.8
+	&:hover
+		color: $accent
+		border-color: transparent
+	+media-breakpoint-down(lg)
+		font-size: 1rem
+
+.preloader__img
+	height: 9vh
+
+.header__contacts__item
+	border-bottom: 1px solid transparent
+	+media-breakpoint-down(lg)
+		font-size: 0.8rem
 
 .phone.header__contacts__item
 	font-size: 0.9rem
 	font-weight: 600
+
+.header__contacts__item:hover
+	font-weight: bold
+	border-color: $accent
 
 .contacts
 	text-align: right
@@ -85,25 +103,37 @@ a
 
 .main
 	background-image: url('../img/mainsection.jpg')
-	min-height: 200px
-	height: 80vh
 	background-size: cover
 	color: white
 
 .slug
 	font-size: 3.1rem
 	font-weight: 500
+	+media-breakpoint-down(sm)
+		font-size: 2.5rem
+	+media-breakpoint-down(xs)
+		text-align: center
+		font-size: 2.1rem
 
 .description
 	font-size: 1.2rem
 	font-weight: normal
 	margin-top: 1.8rem
+	+media-breakpoint-down(xs)
+		text-align: center
+		font-size: 1rem
+		margin-top: 2.5rem
 
 .button__text
 	margin-left: 0.3rem
 
 .main__button-container
 	margin-top: 3rem
+	+media-breakpoint-down(xs)
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: 4rem
 
 .button
 	border-radius: 1.8rem
@@ -117,6 +147,9 @@ a
 
 .main__button-container > a:nth-child(even)
 	margin-left: 2rem
+	+media-breakpoint-down(xs)
+		margin-left: 0
+		margin-top: 1.5rem
 
 .button--primary
 	background: $accent
@@ -143,6 +176,8 @@ a
 .section__header
 	font-size: 36px
 	font-weight: normal
+	+media-breakpoint-down(sm)
+		text-align: center
 
 .rent__inner,
 .works__inner
@@ -151,8 +186,8 @@ a
 .rent-cards
 	margin-top: 3rem
 	display: grid
-	grid-template-columns: 1fr 1fr 1fr 1fr
-	grid-column-gap: 4rem
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+	grid-gap: $gutter*2
 	grid-template-rows: auto
 	align-items: stretch
 	z-index: 10
@@ -164,12 +199,15 @@ a
 	transition: all .3s ease-in-out
 	border-radius: 7px
 	background: white
-	box-shadow: 0px 5px 22px rgba(0, 0, 0, 0.08)	
+	box-shadow: 0px 5px 22px rgba(0, 0, 0, 0.08)
+	&:hover
+		box-shadow: 0px 5px 52px rgba(0, 0, 0, 0.18)	
 
 .rent__card__image
 	background-size: cover
 	border-top-left-radius: 7px
 	border-top-right-radius: 7px
+	background-position-y: 24%
 
 .rent__card__text-container
 	padding: 7%
@@ -199,22 +237,35 @@ a
 	margin-top: 3rem
 	display: grid
 	grid-template-columns: 1fr 1fr
-	grid-column-gap: 2*$gutter
+	grid-gap: 2*$gutter
 	grid-template-rows: auto
 	align-items: stretch
 	z-index: 10
+	+media-breakpoint-down(md)
+		grid-template-columns: 1fr
 .work__card
 	grid-template-columns: 50% 50%
 	display: grid
 	transition: all .3s ease-in-out
 	border-radius: 20px
 	background: #f2f2f2
-	box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.35)	
+	box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.35)
+	&:hover
+		box-shadow: 0px 5px 52px rgba(0, 0, 0, 0.28)
+	+media-breakpoint-down(md)
+		grid-template-columns: 1fr
+		grid-template-rows: auto
 
 .work__card__image
 	background-size: cover
 	border-top-left-radius: 20px
 	border-bottom-left-radius: 20px
+	+media-breakpoint-down(md)
+		border-top-right-radius: 20px
+		border-bottom-left-radius: 0px
+		min-height: 400px
+	+media-breakpoint-down(sm)
+		min-height: 200px
 
 .work__card__text-container
 	padding: $gutter/2 $gutter/1.3
@@ -237,7 +288,7 @@ a
 .advantage__heading
 	font-weight: bold
 	font-size: 1.5rem
-	display: block
+	display: inline-block
 
 .advantage__description
 	margin-top: 1rem
@@ -253,14 +304,18 @@ a
 	grid-template-columns: [first] 1fr [second] 1fr
 	grid-gap: 4rem
 	grid-template-rows: auto
+	+media-breakpoint-down(md)
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
 
 .advantage__icon
 	font-size: 2.5rem
 	color: $accent
 .advantages__heading
+	display: inline
 	font-weight: bold
 	font-size: 2.1rem
-	line-height: 1.3
+	line-height: 1.7
+	padding-bottom: 3px
 	border-bottom: 3px solid $accent
 
 .advantages__list
@@ -288,6 +343,10 @@ a
 .form__button
 	margin: 2rem
 	font-weight: bold
+	border: 1px solid transparent
+	&:hover
+		border: 1px solid $accent
+		box-shadow: 0px 4px 13px rgba($accent, 0.3)
 
 .form__description
 	font-size: 0.8rem
@@ -342,10 +401,57 @@ a
 	color: white
 	background: transparent
 	position: relative
+	height: 0
 
 .footer__heading
 	font-size: 2.1rem
-	box-shadow: 0px 7px 60px rgba(0, 0, 0, 0.08)
+	+media-breakpoint-down(xs)
+		font-size: 1.8rem
+
+.footer__heading-container
+	+media-breakpoint-down(xs)
+		text-align: center
+
+.footer__bg
+	background: radial-gradient(37vw at 49.84% 64.53%, #1D4EAC 0%, #002249 100%)
+	padding-top: 12rem
+	padding-bottom: 1.5rem
+	bottom: 12rem
+	position: relative
+
+.footer__contacts
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	+media-breakpoint-down(xs)
+		align-items: center
+
+.contacts__item
+	margin: 1.5rem 0
+	display: inline-block
+
+.contact__link
+	color: white
+	font-size: 1.3rem
+	border-bottom: 1px solid $accent
+	display: inline
+	&:hover:not(.address)
+		border-bottom-color: transparent
+		font-weight: bold
+		color: white
+.menu__link
+	font-weight: bold
+	color: white
+	display: inline-block
+	font-size: 1.1rem
+	margin: 1rem 0
+	border-bottom: 1px solid transparent
+	&:hover
+		border-bottom-color: $accent
+		color: white
+
+.footer__info
+	margin: 3rem 0
 
 .bg-footer
 	top: -20rem
@@ -354,6 +460,113 @@ a
 	position: absolute
 .copyright
 	color: #1E7DC8
+	+media-breakpoint-down(xs)
+		text-align: center
 	
+#preloader
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background: #fff
+	z-index: 1001
+	display: flex
+	justify-content: center
+	align-items: center
+	will-change: opacity
+
+.preloader__spinner
+	font-size: 4rem
+	color: $accent
+
+.burger
+	width: 25px
+	display: flex
+	align-items: center
+	border-radius: 0
+	background: transparent
+	border: 0
+	text-decoration: none
+	padding: 0
+.burger__container
+	display: inline-block
+	margin-right: 0
+	position: relative
+	top: 2px
+	transition: all .3s ease-in-out
+	width: 25px
+	height: 22px
+.burger__icon
+	background: $accent
+	display: block
+	width: 25px
+	height: 3px
+	transition: all .7s ease-in-out
+	margin: 4px 0
+	&:nth-child(2)
+		will-change: opacity
+	&:first-child
+		margin-top: 0
+		will-change: transform
+	&:last-child
+		margin-bottom: 0
+		will-change: transform
+	&--active
+		margin: 0
+		position: absolute
+		top: 5px
+		&:first-child
+			transform: rotate(-45deg)
+		&:last-child
+			transform: rotate(45deg)
+		&:nth-child(2)
+			opacity: 0
+.mobile-header
+	padding: 1rem 0.8rem
+
+.mobile-contacts
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 1.5rem
+.mobile-contact
+	flex-grow: 1
+	flex-wrap: wrap
+	justify-content: center
+	margin-top: 1rem
+	padding: 0 0.8rem
+	display: flex
+	align-items: center
+.mobile-contact__icon
+	font-size: 1.2rem
+	color: $accent
+
+.mobile-contact__value
+	font-weight: 500
+	font-size: 1.1rem
+	margin-left: 0.6rem
+	&.phone-value
+		font-weight: bold
+.logo__mobile
+	width: 10rem
+
+.mobile-menu
+	margin-top: 2rem
+.mobile-menu__link
+	line-height: 1.5
+	// display: block
+	font-weight: bold
+	font-size: 1.2rem
+	border-bottom: 2px solid $accent
+.mobile-menu__item
+	text-align: center
+	width: 100%
+	margin: 1rem 0
+
+.mobile-line
+	border: none
+	background-color: rgba(black, 0.2)
+	height: 1px
 
 @import "media" // Always at the end

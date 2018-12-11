@@ -6,3 +6,8 @@
 /**/package-lock.json
 /**/Thumbs.db
 /**/*.DS_Store
+apple-touch-icon.png
+favicon*
+site.webmanifest
+safari-pinned-tab.svg
+mstile*
