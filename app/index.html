@@ -135,11 +135,11 @@
                                 подход к требованиям заказчика и гибкую ценовую политику.</h3>
                         </div>
                         <div class="main__button-container">
-                            <a href="tel:+79689169115" class="button button--primary">
+                            <a href="tel:+79689169115" onclick="ym(51554294, 'reachGoal', 'callManager');" class="button button--primary">
                                 <i class="fas fa-phone button__icon"></i>
                                 <span class="button__text">Позвонить менеджеру</span>
                             </a>
-                            <a href="#" onclick="goTo('contacts-section');" class="button button--secondary">
+                            <a href="#" onclick="goTo('contacts-section');ym(51554294, 'reachGoal', 'scrollToForm');" class="button button--secondary">
                                 <i class="fas fa-pen-nib button__icon"></i>
                                 <span class="button__text">Оставить заявку</span>
                             </a>
@@ -348,7 +348,8 @@
                             <input
                                 class="button button--primary form__button"
                                 type="submit"
-                                name="purchase"
+								name="purchase"
+								onclick="ym(51554294, 'reachGoal', 'formSubmitted');"
                                 value="Отправить">
                         </form>
                     </div>
