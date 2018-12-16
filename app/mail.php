@@ -1,5 +1,5 @@
 <?php
-    $mail_to = 'ustroy.info@yandex.ru';
+    $mail_to = 'Ptk140912@inbox.ru';
  
     $name = $_GET['name'];
 	$desc = $_GET['description'];
