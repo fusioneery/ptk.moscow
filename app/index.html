@@ -61,12 +61,13 @@
                     </a>
                     <nav class="nav col">
                         <ul class="nav__list d-flex justify-content-around">
+								<li class="nav__item">
+										<a href="#" onclick="goTo('works-section')" class="nav__link">СМР</a>
+									</li>
                             <li class="nav__item">
                                 <a href="#" onclick="goTo('rent-section')" class="nav__link">Аренда спецтехники</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#" onclick="goTo('works-section')" class="nav__link">СМР</a>
-                            </li>
+                            
                             <li class="nav__item">
                                 <a href="#" onclick="goTo('advantages-section')" class="nav__link">Преимущества</a>
                             </li>
@@ -158,73 +159,6 @@
                 </div>
             </div>
         </main>
-        <section id="rent-section" class="rent">
-            <div class="container">
-                <div class="row align-items-center rent__inner">
-                    <div class="col">
-                        <div class="main__text">
-                            <h2 class="section__header">Аренда спецтехники</h2>
-                            <h3 class="description">Аренда спецтехники в "Производственно-технической компании" поможет Вам решить
-                                практически любую проблему. Наличие собственного парка спецтехники позволяет нам
-                                всегда отвечать требованиям наших заказчиков - оперативно поставлять на
-                                строительные объекты и предлагать услугу аренды спецтехники.</h3>
-                        </div>
-                        <div class="rent-cards">
-                            <div class="rent__card card">
-                                <div style="background-image:url('./img/rent1.jpg');background-position-y: center;" class="rent__card__image"></div>
-                                <div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
-                                    <h5 class="rent__card__heading" itemprop="name">Экскаваторы</h5>
-                                    <h6 class="rent__card__description" itemprop="description">Гусеничные, колесные, мини</h6>
-                                </div>
-                            </div>
-                            <div class="rent__card card">
-                                <div style="background-image:url('./img/rent2.jpg');background-position-x: 30%;" class="rent__card__image"></div>
-                                <div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
-                                    <h5 class="rent__card__heading">Автокраны</h5>
-                                    <!-- <h6 class="rent__card__description"></h6> -->
-                                </div>
-                            </div>
-                            <div class="rent__card card">
-                                <div style="background-image:url('./img/rent3.jpg')" class="rent__card__image"></div>
-                                <div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
-                                    <h5 class="rent__card__heading" itemprop="name">Погрузчики</h5>
-                                    <h6 class="rent__card__description" itemprop="description">Экскаваторные, фронтальные</h6>
-                                </div>
-                            </div>
-                            <div class="rent__card card">
-                                <div style="background-image:url('./img/rent4.jpg')" class="rent__card__image"></div>
-                                <div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
-                                    <h5 class="rent__card__heading" itemprop="name">Манипуляторы</h5>
-                                    <!-- <h6 class="rent__card__description"></h6> -->
-                                </div>
-							</div>
-							<div class="rent__card card">
-                                <div style="background-image:url('./img/rent5.jpg')" class="rent__card__image"></div>
-                                <div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
-                                    <h5 class="rent__card__heading" itemprop="name">Длинномеры</h5>
-                                    <!-- <h6 class="rent__card__description"></h6> -->
-                                </div>
-							</div>
-							<div class="rent__card card">
-                                <div style="background-image:url('./img/rent6.jpg');background-position-x: right;" class="rent__card__image"></div>
-                                <div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
-                                    <h5 class="rent__card__heading" itemprop="name">Вилочные погрузчики</h5>
-                                    <!-- <h6 class="rent__card__description"></h6> -->
-                                </div>
-							</div>
-							<div class="rent__card card">
-                                <div style="background-image:url('./img/rent7.jpg');background-position-x: center;" class="rent__card__image"></div>
-                                <div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
-                                    <h5 class="rent__card__heading" itemprop="name">Бульдозеры</h5>
-                                    <h6 class="rent__card__description" itemprop="description">Гусеничные, колёсные</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img src="./img/ghost.png" class="ghost" alt="Экскаватор">
-        </section>
         <section id="works-section" class="works">
             <div class="container">
                 <div class="row align-items-center works__inner">
@@ -262,6 +196,73 @@
                 </div>
             </div>
 		</section>
+		<section id="rent-section" class="rent">
+				<div class="container">
+					<div class="row align-items-center rent__inner">
+						<div class="col">
+							<div class="main__text">
+								<h2 class="section__header">Аренда спецтехники</h2>
+								<h3 class="description">Аренда спецтехники в "Производственно-технической компании" поможет Вам решить
+									практически любую проблему. Наличие собственного парка спецтехники позволяет нам
+									всегда отвечать требованиям наших заказчиков - оперативно поставлять на
+									строительные объекты и предлагать услугу аренды спецтехники.</h3>
+							</div>
+							<div class="rent-cards">
+								<div class="rent__card card">
+									<div style="background-image:url('./img/rent1.jpg');background-position-y: center;" class="rent__card__image"></div>
+									<div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
+										<h5 class="rent__card__heading" itemprop="name">Экскаваторы</h5>
+										<h6 class="rent__card__description" itemprop="description">Гусеничные, колесные, мини</h6>
+									</div>
+								</div>
+								<div class="rent__card card">
+									<div style="background-image:url('./img/rent2.jpg');background-position-x: 30%;" class="rent__card__image"></div>
+									<div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
+										<h5 class="rent__card__heading">Автокраны</h5>
+										<!-- <h6 class="rent__card__description"></h6> -->
+									</div>
+								</div>
+								<div class="rent__card card">
+									<div style="background-image:url('./img/rent3.jpg')" class="rent__card__image"></div>
+									<div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
+										<h5 class="rent__card__heading" itemprop="name">Погрузчики</h5>
+										<h6 class="rent__card__description" itemprop="description">Экскаваторные, фронтальные</h6>
+									</div>
+								</div>
+								<div class="rent__card card">
+									<div style="background-image:url('./img/rent4.jpg')" class="rent__card__image"></div>
+									<div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
+										<h5 class="rent__card__heading" itemprop="name">Манипуляторы</h5>
+										<!-- <h6 class="rent__card__description"></h6> -->
+									</div>
+								</div>
+								<div class="rent__card card">
+									<div style="background-image:url('./img/rent5.jpg')" class="rent__card__image"></div>
+									<div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
+										<h5 class="rent__card__heading" itemprop="name">Длинномеры</h5>
+										<!-- <h6 class="rent__card__description"></h6> -->
+									</div>
+								</div>
+								<div class="rent__card card">
+									<div style="background-image:url('./img/rent6.jpg');background-position-x: right;" class="rent__card__image"></div>
+									<div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
+										<h5 class="rent__card__heading" itemprop="name">Вилочные погрузчики</h5>
+										<!-- <h6 class="rent__card__description"></h6> -->
+									</div>
+								</div>
+								<div class="rent__card card">
+									<div style="background-image:url('./img/rent7.jpg');background-position-x: center;" class="rent__card__image"></div>
+									<div class="rent__card__text-container" itemscope itemtype="http://schema.org/Product">
+										<h5 class="rent__card__heading" itemprop="name">Бульдозеры</h5>
+										<h6 class="rent__card__description" itemprop="description">Гусеничные, колёсные</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="./img/ghost.png" class="ghost" alt="Экскаватор">
+			</section>
 		<section class="about">
 			<div class="container">
 				<div class="row align-items-center justify-content-center">
@@ -410,12 +411,13 @@
                         <div class="col-6 d-none d-sm-block">
                             <nav class="footer__menu">
                                 <ul class="menu__list">
+										<li class="menu__item">
+												<a href="#" onclick="goTo('works-section')" class="menu__link">Строительно-монтажные работы</a>
+											</li>
                                     <li class="menu__item">
                                         <a href="#" onclick="goTo('rent-section')" class="menu__link">Аренда спецтехники</a>
                                     </li>
-                                    <li class="menu__item">
-                                        <a href="#" onclick="goTo('works-section')" class="menu__link">Строительно-монтажные работы</a>
-                                    </li>
+                                    
                                     <li class="menu__item">
                                         <a href="#" onclick="goTo('advantages-section')" class="menu__link">Преимущества</a>
                                     </li>
