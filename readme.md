@@ -1,1 +1,3 @@
-<h1>Common Landing Page for Moscow Industrial Company</h1>
+# Landing page for "PTK"
+
+Nothing complicated. Just HTML + CSS + JS in one page.
